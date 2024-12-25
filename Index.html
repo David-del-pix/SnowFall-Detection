@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearFrost Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script> <!-- Replace with your API key -->
+    <script src="app.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="data.js" type="module"></script>
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Company Logo" class="company-logo">
+                <span>ClearFrost Solutions</span>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="companies.html">Companies</a></li>
+                <li><a href="#customers">Customers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to ClearFrost Solutions</h1>
+            <p>Your reliable partner for snow clearing services.</p>
+        </section>
+
+        <section id="dashboard">
+            <h2>Real-Time Snowfall Data</h2>
+            <div id="data">
+                <div id="loading-spinner" style="display: none;"></div>
+                    <p>Snowfall: <span id="snowfall">Loading...</span> cm</p>
+                    <p>Salt Level: <span id="saltLevel">Loading...</span> %</p>
+                    <p>Ground Slipperiness: <span id="slipperiness">Loading...</span></p>
+                    <p>Temperature: <span id="temperature">Loading...</span> °C</p>
+            </div>
+            <div id="map"></div>
+        </section>
+        
+
+        <section id="customers">
+            <h2>Request Snow Clearing Service</h2>
+            <form id="enquiryForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                
+                <label for="location">Location:</label>
+                <input type="text" id="location" placeholder="Enter your location" required>
+                
+                <label for="payment">Payment Method:</label>
+                <select id="payment">
+                    <option value="credit">Credit Card</option>
+                    <option value="debit">Debit Card</option>
+                    <option value="apple">Apple Pay</option>
+                </select>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+         <!-- Contact Section -->
+         <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, feel free to reach out to us:</p>
+           
+            <form id="contactForm">
+                <label for="contactName">Your Name:</label>
+                <input type="text" id="contactName" placeholder="Enter your name" required>
+
+                <label for="contactMessage">Message:</label>
+                <textarea id="contactMessage" rows="5" placeholder="Enter your message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <ul>
+                <li><strong>Email:</strong> support@clearfrostsolutions.com</li>
+                <li><strong>Phone:</strong> +1 (123) 456-7890</li>
+                <li><strong>Address:</strong> 123 Snow Lane, Winterville, WP 45678</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ClearFrost Solutions. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

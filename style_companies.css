@@ -1,0 +1,144 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    
+    background: linear-gradient(135deg, #74b9ff, #b009e3);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Home Button Styles */
+.home-button {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #00cec9;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #00cec9;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.home-button:hover {
+    color: white;
+    background: #00cec9;
+    transform: scale(1.1);
+}
+
+/* Adjust Top Padding for Main Content */
+#companies {
+    margin-top: 60px; /* To avoid overlapping with the fixed header */
+}
+
+/* Companies Section */
+#companies {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Heading Styles */
+#companies h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #00cec9;
+}
+
+#companies h3 {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #81ecec;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Input Fields and Select */
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #00cec9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+    background: #0984e3;
+    transform: scale(1.05);
+}
+
+/* Paragraph Styles */
+#companies p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #dfe6e9;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #companies {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+}
+
+form input, form select, form button {
+    max-width: 100%;
+    font-size: 14px; /* Adjust font size for smaller screens */
+}
+
+
+form input:focus, form select:focus {
+    outline: none;
+    border: 2px solid #00cec9;
+    background: rgba(0, 255, 255, 0.1);
+    color: white;
+}
+

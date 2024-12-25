@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies</title>
+    <link rel="stylesheet" href="style_companies.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="home-button">Home</a>
+    </header>
+
+    <section id="companies">
+        <h2>Register Your Snow Clearing Company</h2>
+        <form id="companyRegistrationForm">
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" required>
+    
+            <label for="contactName">Contact Person Name:</label>
+            <input type="text" id="contactName" required>
+    
+            <label for="contactEmail">Contact Email:</label>
+            <input type="email" id="contactEmail" required>
+    
+            <label for="location">Service Area (City, Province):</label>
+            <input type="text" id="location" required>
+    
+            <label for="subscription">Select Subscription Type:</label>
+            <select id="subscription">
+                <option value="monthly">Monthly Subscription</option>
+                <option value="annual">Annual Subscription</option>
+            </select>
+    
+            <button type="submit">Register</button>
+        </form>
+    
+        <h3>Your Dashboard</h3>
+        <p>After registration, your dashboard will show new requests and service details.</p>
+    </section>
+</body>
+</html>
